@@ -1,0 +1,128 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "MingLan_Mono";
+}
+html{
+	font-size: 100px;
+}
+a{
+	text-decoration: none;
+}
+img{
+    border: none;
+    vertical-align: middle;
+    max-width: 100%;
+}
+.wrap{
+	overflow: hidden;
+	position: relative;
+	min-width: 320px;
+	max-width: 640px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#main{
+	width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    opacity: 1;
+    background-image: url(../img/index_bg1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 1s all;
+    -moz-transition: 1s all;
+    -webkit-transition: 1s all;
+    -o-transition: 1s all;
+}
+/*跳转图标*/
+#main .main_fh{
+	width: 30px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+   cursor: pointer;
+}
+#main .main_tel{
+	width: 30px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+#main>p{
+	text-align: center;
+	margin-top: 36%;
+}
+#main>p img{
+	width: 40%;
+}
+/*主导航*/
+#main  #main_nav{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    margin-bottom: -100%;
+    transition: 1s all;
+    -moz-transition: 1s all;
+    -webkit-transition: 1s all;
+    -o-transition: 1s all;
+}
+#main  #main_nav a {
+    display: block;
+    width: 100%;
+    margin-top: 1px;
+    padding: 10px 0;
+    background: rgba(0,0,0,0.8);
+    color: rgba(255,255,255,0.8);
+    transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    font-size: 0.18rem;
+    color: #ffffff;
+    letter-spacing:2px;
+}
+#main_nav a p{
+	font-size: 0.12rem;
+	color: #ffffff;
+	padding-top: 2px;
+	transition: all 0.5s; 
+	-webkit-transition: all 0.5s; 
+	-o-transition: all 0.5s; 
+	-moz-transition: all 0.5s; 
+}
+#main_nav a span{
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s; 
+	-o-transition: all 0.5s; 
+	-moz-transition: all 0.5s;  
+}
+#main #main_nav a:hover{
+	background: rgba(255,255,255,0.2);
+}
+#main_nav a:hover>span{
+	font-weight: 600;
+}
+#main_nav a:hover>p{
+	letter-spacing:6px;
+}
+/*页脚*/
+#footer {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #291f1e;
+    color: #fff;
+    font-size: 0.14rem;
+    letter-spacing:4px;
+}
+

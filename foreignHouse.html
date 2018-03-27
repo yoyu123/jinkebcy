@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="renderer" content="webkit">
+		<meta name="author" content="cqpix.com">
+		<meta name="keywords" content="金科博翠园   ">
+		<meta name="description" content="金科博翠园   ">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telphone=no, email=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="HandheldFriendly" content="true">
+		<title>洋房户型</title>
+		<!--引入css样式-->
+		<link rel="stylesheet" type="text/css" href="css/introduction.css"/>
+		<!--引入jquery样式-->
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+			<!--引入滑动css样式-->
+		<link rel="stylesheet" type="text/css" href="swiper/swiper.css"/>
+		<!--引入滑动js样式-->
+		<script type="text/javascript" src="swiper/swiper.js"></script>
+		<style type="text/css">
+			body{
+				background: #FFFFFF;
+				height: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="home" class="wrap">
+			<div id="main">
+				<!--跳转图标-->
+				<img src="img/fh.png" class="main_fh"/>
+				<img src="img/main_tel1.png" class="main_tel"/>
+				<!--简介-->
+				<div class="fh_text">
+        	        <div id="banner_hx">
+        		        <div class="swiper-wrapper" >
+        			        			<div class="swiper-slide"><img src="img/foreignHouse1.png"></div>
+        			        			<div class="swiper-slide"><img src="img/foreignHouse2.png"></div>
+        			        			<div class="swiper-slide"><img src="img/foreignHouse3.png"></div>
+        			    </div>
+        	        </div>
+                </div>
+                <!--简介end-->
+			</div>
+			<!--副导航-->
+			<div id="nva_index">
+               <span class="nva_close"><img src="http://m.cqoct.com/static/m/nva_close.png" width="17"></span>
+			   <div class="nva_lsit">
+			         <a href="index.html"><p>首页</p><span>HOME</span></a>
+			        <a href="Introduction.html"><p>匠心志·简介</p><span>BRIEF INTRODUCTION</span></a>
+			        <a href="houseType.html"><p>博物集·户型</p><span>HOUSE TYPE</span></a>
+			        <a href="#"><p>风雅韵·画册</p><span>ALBUM OF PINTING</span></a>
+			        <a href="video.html"><p>揽翠轩·视频</p><span>VIDEO APPRECIATION</span></a>
+			                </div>
+			    <div class="nva_footer">
+			        <p>T.62295888 &nbsp; &nbsp;&nbsp;重庆·茶园新区·东西大道</p>
+			    </div>
+			</div>
+			<!--副导航end-->
+		</div>
+		<script type="text/javascript">
+			
+				function resize(){
+					$("#home").height($(window).height());
+					$("#main").height($(window).height());
+				}
+				
+			$(function(){ 
+				 var swiper = new Swiper('#banner_hx',{
+						autoplay: 5000,
+						paginationClickable: true,
+						loop: true
+					});
+				 
+				resize();
+				$(window).resize(function(){
+					resize();
+				});
+				
+              //返回上一界面
+        $('.main_fh').on('click',function(e){
+             e.preventDefault();
+			 history.go(-1);
+		 });
+          //显示导航
+         $(".main_tel").click(function(e){
+             e.preventDefault();
+            $("#nva_index").animate({'right':0});
+        })
+         //隐藏导航
+        $(".nva_close").click(function(){
+            $("#nva_index").animate({'right':'-100%'});
+        })
+         
+			});
+		</script>
+	</body>
+</html>

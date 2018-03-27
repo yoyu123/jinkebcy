@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="renderer" content="webkit">
+		<meta name="author" content="cqpix.com">
+		<meta name="keywords" content="金科博翠园   ">
+		<meta name="description" content="金科博翠园   ">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telphone=no, email=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="HandheldFriendly" content="true">
+		<title>金科博翠园</title>
+		<!--引入css样式-->
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<!--引入jquery样式-->
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	</head>
+	<body>
+		<div id="home" class="wrap">
+			<div id="main">
+				<p><img src="img/logo.png"/></p>
+				<!--主导航-->
+				<nav id="main_nav">
+					<a href="Introduction.html">
+						<span>匠心志·简介</span>
+						<p>Brief Introduction</p>
+					</a>
+					<a href="houseType.html">
+						<span>博物集·户型</span>
+						<p>House Type</p>
+					</a>
+					<a href="#">
+						<span>风雅韵·画册</span>
+						<p>Album of Pinting</p>
+					</a>
+					<a href="video.html" >
+						<span>揽翠轩·视频</span>
+						<p>Video Appreciation</p>
+					</a>
+					
+				</nav>
+			</div>
+			<!--页脚-->
+			<footer id="footer">
+				<p>T.62295888 &nbsp; &nbsp;&nbsp;重庆·茶园新区·东西大道</p>
+			</footer>
+			
+		</div>
+		<script type="text/javascript">
+			
+				function resize(){
+					$("#home").height($(window).height());
+					$("#main").height($(window).height()-40);
+				}
+				
+			$(function(){
+				resize();
+				$(window).resize(function(){
+					resize();
+				});
+				//导航延时出现
+				setTimeout(function(){
+            $('#main_nav').css({'margin-bottom':'0'});
+         },500);
+              //返回上一界面
+        $('.main_fh').on('click',function(e){
+             e.preventDefault();
+			 history.go(-1);
+		 });
+          //显示导航
+         $(".main_tel").click(function(e){
+             e.preventDefault();
+            $("#nva_index").animate({'right':0});
+        })
+         //隐藏导航
+        $(".nva_close").click(function(){
+            $("#nva_index").animate({'right':'-100%'});
+        })
+         
+			});
+		</script>
+	</body>
+</html>
